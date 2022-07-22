@@ -7,8 +7,12 @@ public class PersonajeMovement : MonoBehaviour
     private Rigidbody2D Rigidbody2D;
     private float Horizontal;
     private float vertical;
+    private float arrowHorizontal;
+    private float arrowVertical;
     public GameObject BulletPrefab;
     private float LastShoot;
+    public float speed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +24,7 @@ public class PersonajeMovement : MonoBehaviour
     {
         Horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
+        
         if (Horizontal < 0.0f) transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
         else if (Horizontal > 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
         if (vertical < 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
@@ -29,7 +34,6 @@ public class PersonajeMovement : MonoBehaviour
             shoot();
             LastShoot = Time.time;
         }
-
     }
 
     
