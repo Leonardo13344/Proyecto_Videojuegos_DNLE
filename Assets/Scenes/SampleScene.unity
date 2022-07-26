@@ -504,7 +504,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1.1546813
+  orthographic size: 1.1507988
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -548,6 +548,7 @@ GameObject:
   - component: {fileID: 1141655260}
   - component: {fileID: 1141655261}
   - component: {fileID: 1141655262}
+  - component: {fileID: 1141655263}
   m_Layer: 0
   m_Name: john_idle_0
   m_TagString: Untagged
@@ -671,5 +672,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f666f9bcfedfdc4b827e6b2054e1163, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulletPrefab: {fileID: 7339614455910659197, guid: 0531b05f409849241baa01d7dbf867d0, type: 3}
+  BulletPrefab: {fileID: 3239483371804262340, guid: fee17967644c45144a76ffd4c98b307d, type: 3}
   speed: 0.25
+--- !u!95 &1141655263
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141655256}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cd1fcfe8d334df247a39ba90cd062b72, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

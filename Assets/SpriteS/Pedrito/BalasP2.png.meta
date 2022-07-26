@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2dc7d8e7ed11c1f42a1bd51d3f512553
+guid: d37f29e0813019043983848d40ac04a8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpritesBalasP_0
+      name: BalasP2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 25
-        height: 31
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5fb2aa2483b455e4485f73f5cfc90bd6
-      internalID: -118328319
+      spriteID: aa5d55d0e0ac53e46a33496db23c8b09
+      internalID: -53313415
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesBalasP_1
+      name: BalasP2_1
       rect:
         serializedVersion: 2
-        x: 25
+        x: 8
         y: 0
-        width: 25
-        height: 31
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +151,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 645ffa5d814431f4da16d9d58bc493ec
-      internalID: -50600017
+      spriteID: 95c28e418fdb0ee408f6f2bf6d6eeb71
+      internalID: 210288211
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesBalasP_2
+      name: BalasP2_2
       rect:
         serializedVersion: 2
-        x: 50
+        x: 16
         y: 0
-        width: 25
-        height: 31
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +172,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3fdc66500d3d8c64e92319cf0ea624ab
-      internalID: 1057829857
+      spriteID: ba09a75a184e2d045841cf32e283f64c
+      internalID: -1429261671
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesBalasP_3
+      name: BalasP2_3
       rect:
         serializedVersion: 2
-        x: 75
+        x: 24
         y: 0
-        width: 25
-        height: 31
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1875ab51a1b5d5d468fe8f16909fa2ab
-      internalID: -1278771008
+      spriteID: 394e76366ca46234287e954169e7e7d1
+      internalID: -1882778267
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesBalasP_4
+      name: BalasP2_4
       rect:
         serializedVersion: 2
-        x: 100
+        x: 32
         y: 0
-        width: 25
-        height: 31
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,20 +214,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48b4f39b255614f4aa1d4a7e326c47eb
-      internalID: -457825513
+      spriteID: cbe8bd80de6f89f4f921401d3a372ca5
+      internalID: -1767205399
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesBalasP_5
+      name: BalasP2_5
       rect:
         serializedVersion: 2
-        x: 125
+        x: 40
         y: 0
-        width: 25
-        height: 31
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,8 +235,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a7178af0de783b4489b7041b471a60b
-      internalID: 2130490024
+      spriteID: fccbb784e8a80fb418039f1718b0fb9a
+      internalID: -1658669943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BalasP2_6
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34d819d34bf62ce4ea6d868488fb7df5
+      internalID: -750471091
       vertices: []
       indices: 
       edges: []
@@ -252,12 +273,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SpritesBalasP_3: -1278771008
-      SpritesBalasP_0: -118328319
-      SpritesBalasP_4: -457825513
-      SpritesBalasP_1: -50600017
-      SpritesBalasP_5: 2130490024
-      SpritesBalasP_2: 1057829857
+      BalasP2_2: -1429261671
+      BalasP2_6: -750471091
+      BalasP2_5: -1658669943
+      BalasP2_0: -53313415
+      BalasP2_1: 210288211
+      BalasP2_3: -1882778267
+      BalasP2_4: -1767205399
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
