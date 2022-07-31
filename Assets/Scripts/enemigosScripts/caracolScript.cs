@@ -5,7 +5,7 @@ using UnityEngine;
 public class caracolScript : MonoBehaviour
 {
     public Transform target;
-    private Vector2 movement;
+    private Animator animator;
     public Rigidbody2D rb;
     public float speed = 5f;
     
@@ -17,6 +17,7 @@ public class caracolScript : MonoBehaviour
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -27,9 +28,32 @@ public class caracolScript : MonoBehaviour
         
         Vector3 direction = target.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        
-        
-       
+        Debug.Log(angle);
+
+        animator.SetBool("runRigth", direction.x != 0.0f );
+        animator.SetBool("runUp", direction.y > 0.0f);
+        animator.SetBool("runDown", direction.y < 0.0f);
+
+        if (direction.x < 0.0f)
+        {
+            transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+        }
+        if (direction.x > 0.0f)
+        {
+            transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+        }
+        if (direction.y < 0.0f)
+        {
+            transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+
+        }
+        if (direction.y > 0.0f)
+        {
+            transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+        }
+
+
+
     }
 
     private void move()
