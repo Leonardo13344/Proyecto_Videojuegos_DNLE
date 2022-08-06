@@ -31,12 +31,14 @@ public class caracolScript : MonoBehaviour
         Debug.Log(angle);
 
         animator.SetBool("runRigth", direction.x != 0.0f );
-        animator.SetBool("runUp", direction.y > 0.0f);
-        animator.SetBool("runDown", direction.y < 0.0f);
+        animator.SetBool("runUp", direction.y > 0.0f && (angle >= 30f && angle <= 150f));
+        Debug.Log("X: " + direction.x);
+        animator.SetBool("runDown", direction.y < 0.0f && (angle >= -150 && angle <= -30f));
 
         if (direction.x < 0.0f)
         {
             transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+            Debug.Log("Test");
         }
         if (direction.x > 0.0f)
         {
