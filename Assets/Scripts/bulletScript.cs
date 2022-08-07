@@ -28,4 +28,35 @@ public class bulletScript : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Enemy")
+        {
+            caracolScript caracol = collision.collider.GetComponent<caracolScript>();
+            fantasmaScript fantasma = collision.collider.GetComponent<fantasmaScript>();
+            if (caracol != null)
+            {
+                caracol.hit();
+            }
+            if(fantasma != null)
+            {
+                fantasma.hit();
+            }
+            DestroyBullet();
+        }
+        else if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("Test Player");
+            PersonajeMovement pedrito = collision.collider.GetComponent<PersonajeMovement>();
+            if (pedrito != null)
+            {
+                pedrito.hit();
+            }
+            DestroyBullet();
+        }
+        
+    }
+    
+
 }

@@ -8,6 +8,7 @@ public class caracolScript : MonoBehaviour
     private Animator animator;
     public Rigidbody2D rb;
     public float speed = 5f;
+    private int hp = 8;
     
 
 
@@ -23,53 +24,53 @@ public class caracolScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //float distanceX = Mathf.Abs(pedrito.transform.position.x - transform.position.x);
-        //float distanceY = Mathf.Abs(pedrito.transform.position.y - transform.position.y);
-        
+
+        if (target == null) return;
         Vector3 direction = target.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        Debug.Log(angle);
+        //Debug.Log(angle);
 
         animator.SetBool("runRigth", direction.x != 0.0f );
         animator.SetBool("runUp", direction.y > 0.0f && (angle >= 30f && angle <= 150f));
-        Debug.Log("X: " + direction.x);
+        //Debug.Log("X: " + direction.x);
         animator.SetBool("runDown", direction.y < 0.0f && (angle >= -150 && angle <= -30f));
 
-        if (direction.x < 0.0f)
-        {
-            transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
-            Debug.Log("Test");
-        }
-        if (direction.x > 0.0f)
-        {
-            transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-        }
-        if (direction.y < 0.0f)
-        {
-            transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-
-        }
-        if (direction.y > 0.0f)
-        {
-            transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-        }
+        if (direction.x > 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+        else transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+        
 
 
 
     }
-
     private void move()
     {
+        if (target == null) return;
         Vector3 pos = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         rb.MovePosition(pos);
     }
-
     void FixedUpdate()
     {
-
         move();
-
     }
 
-    
+    public void hit()
+    {
+        hp -= 1;
+        if (hp == 0) Destroy(gameObject);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            PersonajeMovement pedrito = collision.collider.GetComponent<PersonajeMovement>();
+            if (pedrito != null)
+            {
+                Debug.Log("Test Hit Caracol");
+                pedrito.hit();
+            }
+        }
+    }
+
+
 }

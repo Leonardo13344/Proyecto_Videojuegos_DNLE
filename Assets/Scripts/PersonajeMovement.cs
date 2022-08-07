@@ -11,6 +11,7 @@ public class PersonajeMovement : MonoBehaviour
     public GameObject BulletPrefab;
     private float LastShoot;
     public float speed;
+    private int hp = 5;
 
     // Start is called before the first frame update
     void Start()
@@ -79,11 +80,17 @@ public class PersonajeMovement : MonoBehaviour
 
     private void shoot(Vector3 dir)
     {
-        GameObject bullet = Instantiate(BulletPrefab, transform.position + dir * 0.1f, Quaternion.identity);
+        GameObject bullet = Instantiate(BulletPrefab, transform.position + dir * 0.2f, Quaternion.identity);
         bullet.GetComponent<bulletScript>().setDirection(dir);
     }
 
     private void FixedUpdate(){
         Rigidbody2D.velocity = new Vector2(Horizontal, vertical);   
+    }
+
+    public void hit()
+    {
+        hp -= 1;
+        if (hp == 0) Destroy(gameObject);
     }
 }
