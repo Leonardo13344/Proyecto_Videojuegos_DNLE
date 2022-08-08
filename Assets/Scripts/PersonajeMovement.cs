@@ -11,7 +11,7 @@ public class PersonajeMovement : MonoBehaviour
     public GameObject BulletPrefab;
     private float LastShoot;
     public float speed;
-    private int hp = 5;
+    private int hp = 10;
 
     // Start is called before the first frame update
     void Start()

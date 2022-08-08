@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 662207250a399bc47808243ae44dc386
+guid: e452d891259b7434aa813e95fffdb542
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 3-FantasmaIzq_0
+      name: guagua_idle_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 4
-        width: 14
-        height: 24
+        x: 23
+        y: 29
+        width: 163
+        height: 174
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0b0d57b3ef5c814f8e3a3be3b2159ae
-      internalID: -507984688
+      spriteID: 70a2d48daf59d414385b9bcc8dabd21a
+      internalID: 1060760590
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3-FantasmaIzq_1
+      name: guagua_idle_2
       rect:
         serializedVersion: 2
-        x: 32
-        y: 4
-        width: 14
-        height: 24
+        x: 237
+        y: 28
+        width: 163
+        height: 174
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +151,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9691b89af89160b4984fc50b227e5bcf
-      internalID: 35589629
+      spriteID: defc6b50fb7613f49b727f852ee5ee85
+      internalID: 444477241
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3-FantasmaIzq_2
+      name: guagua_idle_3
       rect:
         serializedVersion: 2
-        x: 58
-        y: 4
-        width: 14
-        height: 24
+        x: 455
+        y: 28
+        width: 163
+        height: 174
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,8 +172,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e79e5a614e5d73a4387c53736e58e9d1
-      internalID: 343282211
+      spriteID: 58c5ed40d14def2429b72900b4d12bdb
+      internalID: -1818136979
       vertices: []
       indices: 
       edges: []
@@ -189,9 +189,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      3-FantasmaIzq_1: 35589629
-      3-FantasmaIzq_2: 343282211
-      3-FantasmaIzq_0: -507984688
+      guagua_idle_1: 1713952849
+      guagua_idle_6: 1229475720
+      guagua_idle_3: -1818136979
+      guagua_idle_2: 444477241
+      guagua_idle_5: -189437811
+      guagua_idle_7: 1871080141
+      guagua_idle_0: 1060760590
+      guagua_idle_4: -1269237755
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -29,36 +29,31 @@ public class fantasmaScript : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         float distanceX = Mathf.Abs(target.transform.position.x - transform.position.x);
         float distanceY = Mathf.Abs(target.transform.position.y - transform.position.y);
-
-        animator.SetBool("lookRight", direction.x != 0.0f);
+        animator.SetBool("lookRight", direction.x > 0.0f );
+        animator.SetBool("lookLeft", direction.x < 0.0f && ((angle >= 150f && angle <= 180f) || (angle >= -180f && angle <= -150f)));
         animator.SetBool("lookUp", direction.y > 0.0f && (angle >= 30f && angle <= 150f));
-        animator.SetBool("lookFront", direction.y < 0.0f && (angle >= -150 && angle <= -30f));
+        
 
-        if (direction.x > 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-        else transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+        /*if (direction.x > 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+        else transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);*/
 
-        if (direction.x > 0.0f && Time.time > LastShoot + 0.25f && (distanceX < 1.0f && distanceY < 1.0f))
+        if (Time.time > LastShoot + 0.25f && (distanceX < 1.0f && distanceY < 1.0f))
         {
-            shoot(Vector2.right);
-            LastShoot = Time.time;
-        } 
-        else if (direction.x < 0.0f && Time.time > LastShoot + 0.25f && (distanceX < 1.0f && distanceY < 1.0f))
-        {
-            shoot(Vector2.left);
+            shoot(direction);
             LastShoot = Time.time;
         }
-        else if (direction.y > 0.0f && Time.time > LastShoot + 0.25f && (distanceX < 1.0f && distanceY < 1.0f))
+        
+        if(direction.x > 0.0f)
         {
-            Debug.Log("X: " + distanceX);
-            Debug.Log("X: " + distanceY);
-            shoot(Vector2.up);
-            LastShoot = Time.time;
-        }
-        else if (direction.y < 0.0f && Time.time > LastShoot + 0.25f && (distanceX < 1.0f && distanceY < 1.0f))
+            
+        }else if (direction.y > 0.0f && (angle >= 30f && angle <= 150f))
         {
-            shoot(Vector2.down);
-            LastShoot = Time.time;
+            
+        }else if (direction.y < 0.0f && (angle >= -150 && angle <= -30f))
+        {
+            
         }
+        
     }
 
     private void shoot(Vector3 dir)
