@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e452d891259b7434aa813e95fffdb542
+guid: 9f284df569100f645af8001048c83655
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: guagua_idle_0
+      name: guagua_death_0
       rect:
         serializedVersion: 2
-        x: 22
-        y: 18
-        width: 82
-        height: 83
+        x: 20
+        y: 17
+        width: 84
+        height: 85
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e265d77bd5e759f4a9711faaa913ebff
-      internalID: 730125195
+      spriteID: 532845e7e591648408557904a7ee7f15
+      internalID: -669726019
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guagua_idle_1
+      name: guagua_death_1
       rect:
         serializedVersion: 2
-        x: 149
-        y: 16
-        width: 82
-        height: 79
+        x: 147
+        y: 17
+        width: 84
+        height: 84
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,18 +151,39 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55e41188b96535c44ada93cf2f3beca8
-      internalID: 1708557788
+      spriteID: b89d6458c4e51e149998b685a367236d
+      internalID: 1389076700
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guagua_idle_2
+      name: guagua_death_2
       rect:
         serializedVersion: 2
-        x: 272
-        y: 16
+        x: 279
+        y: 17
+        width: 84
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa7d73c82acdf804fbb6f4ee21eddd57
+      internalID: -152592607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guagua_death_3
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 17
         width: 83
         height: 85
       alignment: 0
@@ -172,8 +193,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2bd9b6390cf29246bacb3ace37134d0
-      internalID: -700165857
+      spriteID: 54b5ead044934704b993c13abdd653ef
+      internalID: 220200969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guagua_death_4
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 43
+        width: 32
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72dc558751b16624cba43a658776c9ee
+      internalID: 1729197146
       vertices: []
       indices: 
       edges: []
@@ -189,11 +231,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      guagua_idle_1: 1708557788
-      guagua_idle_3: -496766776
-      guagua_idle_2: -700165857
-      guagua_idle_0: 730125195
-      guagua_idle_4: -1148911857
+      guagua_death_0: -669726019
+      guagua_death_7: 901052228
+      guagua_death_4: 1729197146
+      guagua_death_6: 1675122222
+      guagua_death_5: 1248230140
+      guagua_death_2: -152592607
+      guagua_death_8: 1918861546
+      guagua_death_3: 220200969
+      guagua_death_1: 1389076700
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

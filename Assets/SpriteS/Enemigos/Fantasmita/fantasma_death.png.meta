@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e452d891259b7434aa813e95fffdb542
+guid: 2b5c97cbbe347b145b690fecf8399b40
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,13 +116,55 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: guagua_idle_0
+      name: fantasma_death_0
       rect:
         serializedVersion: 2
-        x: 22
+        x: 5
+        y: 0
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78f5e219c11b6194792a20de160a5ccf
+      internalID: 269562493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fantasma_death_1
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 0
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f4471ade65fe8742a1936e7af109336
+      internalID: 1264841476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fantasma_death_2
+      rect:
+        serializedVersion: 2
+        x: 55
         y: 18
-        width: 82
-        height: 83
+        width: 8
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +172,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e265d77bd5e759f4a9711faaa913ebff
-      internalID: 730125195
+      spriteID: bd0706b970873174590e75484d28b505
+      internalID: -530283235
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guagua_idle_1
+      name: fantasma_death_3
       rect:
         serializedVersion: 2
-        x: 149
-        y: 16
-        width: 82
-        height: 79
+        x: 78
+        y: 0
+        width: 9
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55e41188b96535c44ada93cf2f3beca8
-      internalID: 1708557788
+      spriteID: 0e29d9a83efd1f04aa7718671a513d1a
+      internalID: 615459080
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guagua_idle_2
+      name: fantasma_death_4
       rect:
         serializedVersion: 2
-        x: 272
-        y: 16
-        width: 83
-        height: 85
+        x: 101
+        y: 0
+        width: 10
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,8 +214,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2bd9b6390cf29246bacb3ace37134d0
-      internalID: -700165857
+      spriteID: 1b2501d533d7af74cb831fcf24b0b06e
+      internalID: -112508800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fantasma_death_5
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 0
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 196e169adc32307488d07eeea22c124b
+      internalID: 1715455570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fantasma_death_6
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 0
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33ab4150d45bf8344a2cb5e644eb3e3f
+      internalID: 344400634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fantasma_death_7
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 0
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e89fb89f4aa51df42bfb31c7a7ea52ca
+      internalID: 2096126594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fantasma_death_8
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 0
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b48db8973ffc72248b64a95bb4dfb443
+      internalID: 1898508783
       vertices: []
       indices: 
       edges: []
@@ -189,11 +315,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      guagua_idle_1: 1708557788
-      guagua_idle_3: -496766776
-      guagua_idle_2: -700165857
-      guagua_idle_0: 730125195
-      guagua_idle_4: -1148911857
+      fantasma_death_5: 1715455570
+      fantasma_death_2: -530283235
+      fantasma_death_8: 1898508783
+      fantasma_death_4: -112508800
+      fantasma_death_7: 2096126594
+      fantasma_death_1: 1264841476
+      fantasma_death_6: 344400634
+      fantasma_death_0: 269562493
+      fantasma_death_3: 615459080
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

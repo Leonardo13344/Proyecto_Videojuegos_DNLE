@@ -5,7 +5,7 @@ using UnityEngine;
 public class cameraScript : MonoBehaviour
 {
     public GameObject currentRoom;
-    private Vector3 ref1;
+    
     public float smoothness;
 
     // Start is called before the first frame update

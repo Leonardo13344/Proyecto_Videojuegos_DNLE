@@ -9,6 +9,7 @@ public class caracolScript : MonoBehaviour
     public Rigidbody2D rb;
     public float speed = 5f;
     private int hp = 8;
+    private bool isAlive;
     
 
 
@@ -19,6 +20,7 @@ public class caracolScript : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        isAlive = true;
     }
 
     // Update is called once per frame
@@ -34,6 +36,7 @@ public class caracolScript : MonoBehaviour
         animator.SetBool("runUp", direction.y > 0.0f && (angle >= 30f && angle <= 150f));
         //Debug.Log("X: " + direction.x);
         animator.SetBool("runDown", direction.y < 0.0f && (angle >= -150 && angle <= -30f));
+        animator.SetBool("die", hp == 0);
 
         if (direction.x > 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
         else transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
@@ -44,7 +47,7 @@ public class caracolScript : MonoBehaviour
     }
     private void move()
     {
-        if (target == null) return;
+        if (target == null || !isAlive) return;
         Vector3 pos = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         rb.MovePosition(pos);
     }
@@ -56,7 +59,12 @@ public class caracolScript : MonoBehaviour
     public void hit()
     {
         hp -= 1;
-        if (hp == 0) Destroy(gameObject);
+        if (hp == 0) isAlive = false;
+    }
+
+    public void die()
+    {
+        Destroy(gameObject);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

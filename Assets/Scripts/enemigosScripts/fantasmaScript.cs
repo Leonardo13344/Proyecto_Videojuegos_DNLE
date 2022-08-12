@@ -12,12 +12,14 @@ public class fantasmaScript : MonoBehaviour
     public GameObject BulletPrefab;
     private float LastShoot;
     private int hp = 7;
+    private bool isAlive;
 
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        isAlive = true;
     }
 
     // Update is called once per frame
@@ -34,25 +36,21 @@ public class fantasmaScript : MonoBehaviour
         animator.SetBool("lookUp", direction.y > 0.0f && (angle >= 30f && angle <= 150f));
         
 
+
         /*if (direction.x > 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
         else transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);*/
 
-        if (Time.time > LastShoot + 0.25f && (distanceX < 1.0f && distanceY < 1.0f))
+        if (Time.time > LastShoot + 0.25f && (distanceX < 1.0f && distanceY < 1.0f) && isAlive)
         {
             shoot(direction);
             LastShoot = Time.time;
         }
-        
-        if(direction.x > 0.0f)
+        else
         {
-            
-        }else if (direction.y > 0.0f && (angle >= 30f && angle <= 150f))
-        {
-            
-        }else if (direction.y < 0.0f && (angle >= -150 && angle <= -30f))
-        {
-            
+            animator.SetBool("Die", hp == 0);
         }
+        
+       
         
     }
 
@@ -64,6 +62,14 @@ public class fantasmaScript : MonoBehaviour
     public void hit()
     {
         hp -= 1;
-        if (hp == 0) Destroy(gameObject);
+        if (hp == 0)
+        {
+            isAlive = false;
+        }
+    }
+
+    public void die()
+    {
+        Destroy(gameObject);
     }
 }
