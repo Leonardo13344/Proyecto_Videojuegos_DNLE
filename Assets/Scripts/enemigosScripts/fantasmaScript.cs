@@ -13,6 +13,7 @@ public class fantasmaScript : MonoBehaviour
     private float LastShoot;
     private int hp = 7;
     private bool isAlive;
+    public GameObject room;
 
     void Start()
     {
@@ -34,11 +35,6 @@ public class fantasmaScript : MonoBehaviour
         animator.SetBool("lookRight", direction.x > 0.0f );
         animator.SetBool("lookLeft", direction.x < 0.0f && ((angle >= 150f && angle <= 180f) || (angle >= -180f && angle <= -150f)));
         animator.SetBool("lookUp", direction.y > 0.0f && (angle >= 30f && angle <= 150f));
-        
-
-
-        /*if (direction.x > 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-        else transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);*/
 
         if (Time.time > LastShoot + 0.25f && (distanceX < 1.0f && distanceY < 1.0f) && isAlive)
         {
@@ -48,10 +44,10 @@ public class fantasmaScript : MonoBehaviour
         else
         {
             animator.SetBool("Die", hp == 0);
+            
         }
-        
-       
-        
+
+
     }
 
     private void shoot(Vector3 dir)
@@ -70,6 +66,7 @@ public class fantasmaScript : MonoBehaviour
 
     public void die()
     {
+        room.GetComponent<roomScript>().checkDeaths();
         Destroy(gameObject);
     }
 }

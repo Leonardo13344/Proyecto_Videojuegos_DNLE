@@ -10,6 +10,7 @@ public class caracolScript : MonoBehaviour
     public float speed = 5f;
     private int hp = 8;
     private bool isAlive;
+    public GameObject room;
     
 
 
@@ -37,6 +38,7 @@ public class caracolScript : MonoBehaviour
         //Debug.Log("X: " + direction.x);
         animator.SetBool("runDown", direction.y < 0.0f && (angle >= -150 && angle <= -30f));
         animator.SetBool("die", hp == 0);
+        
 
         if (direction.x > 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
         else transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
@@ -59,11 +61,17 @@ public class caracolScript : MonoBehaviour
     public void hit()
     {
         hp -= 1;
-        if (hp == 0) isAlive = false;
+        if (hp == 0)
+        {
+            
+            isAlive = false;
+        }
+            
     }
 
     public void die()
     {
+        room.GetComponent<roomScript>().checkDeaths();
         Destroy(gameObject);
     }
 

@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class roomScript : MonoBehaviour
 {
-    
-    
+
+    public GameObject[] enemies;
+    public bool allDead;
+
+    private bool firstTimeEnter;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -16,15 +20,37 @@ public class roomScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         
+        if (allDead)
+        {
+            Debug.Log("All Dead Passed");
+        }
+    }
+
+    public void checkDeaths()
+    {
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            if (enemies[i] != null)
+            {
+                allDead = false;
+            }else
+            {
+                allDead = true;
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.tag == "Player")
+        {
+            if(firstTimeEnter == false)
+            {
+                firstTimeEnter = true;
+            }
+        }
         Camera.main.GetComponent<cameraScript>().currentRoom = gameObject;
-        Debug.Log(Camera.main.GetComponent<cameraScript>().currentRoom);
-        Debug.Log(gameObject);
-
-
     }
 }
