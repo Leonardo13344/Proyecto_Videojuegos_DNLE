@@ -28,10 +28,14 @@ public class fantasmaScript : MonoBehaviour
     {
 
         if (target == null) return;
+
         Vector3 direction = target.position - transform.position;
+
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
         float distanceX = Mathf.Abs(target.transform.position.x - transform.position.x);
         float distanceY = Mathf.Abs(target.transform.position.y - transform.position.y);
+
         animator.SetBool("lookRight", direction.x > 0.0f );
         animator.SetBool("lookLeft", direction.x < 0.0f && ((angle >= 150f && angle <= 180f) || (angle >= -180f && angle <= -150f)));
         animator.SetBool("lookUp", direction.y > 0.0f && (angle >= 30f && angle <= 150f));
@@ -44,10 +48,7 @@ public class fantasmaScript : MonoBehaviour
         else
         {
             animator.SetBool("Die", hp == 0);
-            
         }
-
-
     }
 
     private void shoot(Vector3 dir)
@@ -67,6 +68,8 @@ public class fantasmaScript : MonoBehaviour
     public void die()
     {
         room.GetComponent<roomScript>().checkDeaths();
+        GetComponent<Collider2D>().enabled = false;
+        this.enabled = false;
         Destroy(gameObject);
     }
 }

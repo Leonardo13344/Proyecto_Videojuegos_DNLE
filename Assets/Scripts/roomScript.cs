@@ -14,14 +14,12 @@ public class roomScript : MonoBehaviour
     void Awake()
     {
         //cameraScript = cameraObject.GetComponent<cameraScript>();
-
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        
         if (allDead)
         {
             Debug.Log("All Dead Passed");

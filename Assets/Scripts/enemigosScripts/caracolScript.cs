@@ -10,6 +10,7 @@ public class caracolScript : MonoBehaviour
     public float speed = 5f;
     private int hp = 8;
     private bool isAlive;
+    
     public GameObject room;
     
 
@@ -21,31 +22,31 @@ public class caracolScript : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        isAlive = true;
+        isAlive = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Camera.main.GetComponent<cameraScript>().currentRoom == room)
+        {
+            isAlive = true;
+        }
 
         if (target == null) return;
         Vector3 direction = target.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        //Debug.Log(angle);
 
         animator.SetBool("runRigth", direction.x != 0.0f );
         animator.SetBool("runUp", direction.y > 0.0f && (angle >= 30f && angle <= 150f));
-        //Debug.Log("X: " + direction.x);
+
         animator.SetBool("runDown", direction.y < 0.0f && (angle >= -150 && angle <= -30f));
         animator.SetBool("die", hp == 0);
         
-
         if (direction.x > 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
         else transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+
         
-
-
-
     }
     private void move()
     {
@@ -63,7 +64,6 @@ public class caracolScript : MonoBehaviour
         hp -= 1;
         if (hp == 0)
         {
-            
             isAlive = false;
         }
             
@@ -72,6 +72,8 @@ public class caracolScript : MonoBehaviour
     public void die()
     {
         room.GetComponent<roomScript>().checkDeaths();
+        GetComponent<Collider2D>().enabled = false;
+        this.enabled = false;
         Destroy(gameObject);
     }
 
