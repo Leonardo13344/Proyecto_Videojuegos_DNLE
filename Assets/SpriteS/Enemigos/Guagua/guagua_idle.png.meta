@@ -119,10 +119,10 @@ TextureImporter:
       name: guagua_idle_0
       rect:
         serializedVersion: 2
-        x: 22
-        y: 18
-        width: 82
-        height: 83
+        x: 9
+        y: 15
+        width: 68
+        height: 69
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,8 +130,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e265d77bd5e759f4a9711faaa913ebff
-      internalID: 730125195
+      spriteID: bace5ee9cb3b79b40ba8bcaddb93fe75
+      internalID: -1907514202
       vertices: []
       indices: 
       edges: []
@@ -140,10 +140,10 @@ TextureImporter:
       name: guagua_idle_1
       rect:
         serializedVersion: 2
-        x: 149
-        y: 16
-        width: 82
-        height: 79
+        x: 94
+        y: 12
+        width: 71
+        height: 67
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,8 +151,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55e41188b96535c44ada93cf2f3beca8
-      internalID: 1708557788
+      spriteID: c5940ea9ed966494e9f16f910ffb609d
+      internalID: 117331124
       vertices: []
       indices: 
       edges: []
@@ -161,10 +161,10 @@ TextureImporter:
       name: guagua_idle_2
       rect:
         serializedVersion: 2
-        x: 272
-        y: 16
-        width: 83
-        height: 85
+        x: 177
+        y: 13
+        width: 66
+        height: 68
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,8 +172,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2bd9b6390cf29246bacb3ace37134d0
-      internalID: -700165857
+      spriteID: 4f3628f0b1075f04eb3a1378b1448ed8
+      internalID: -467602062
       vertices: []
       indices: 
       edges: []
@@ -189,11 +189,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      guagua_idle_1: 1708557788
-      guagua_idle_3: -496766776
-      guagua_idle_2: -700165857
-      guagua_idle_0: 730125195
-      guagua_idle_4: -1148911857
+      guagua_idle_1: 117331124
+      guagua_idle_3: -1229328854
+      guagua_idle_2: -467602062
+      guagua_idle_0: -1907514202
+      guagua_idle_4: -1630031294
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

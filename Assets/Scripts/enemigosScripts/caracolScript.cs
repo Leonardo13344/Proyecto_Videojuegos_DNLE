@@ -32,6 +32,10 @@ public class caracolScript : MonoBehaviour
         {
             isAlive = true;
         }
+        else
+        {
+            isAlive = false;
+        }
 
         if (target == null) return;
         Vector3 direction = target.position - transform.position;

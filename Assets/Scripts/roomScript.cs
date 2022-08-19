@@ -10,6 +10,9 @@ public class roomScript : MonoBehaviour
 
     private bool firstTimeEnter;
 
+    public GameObject[] doors;
+    public bool open; 
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -51,4 +54,6 @@ public class roomScript : MonoBehaviour
         }
         Camera.main.GetComponent<cameraScript>().currentRoom = gameObject;
     }
+
+    
 }
