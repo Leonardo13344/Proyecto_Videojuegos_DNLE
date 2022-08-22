@@ -75,10 +75,9 @@ public class caracolScript : MonoBehaviour
 
     public void die()
     {
-        room.GetComponent<roomScript>().checkDeaths();
-        GetComponent<Collider2D>().enabled = false;
-        this.enabled = false;
         Destroy(gameObject);
+        room.GetComponent<roomScript>().muerteEnemigo(gameObject);
+        Debug.Log("Muere Caracol");
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

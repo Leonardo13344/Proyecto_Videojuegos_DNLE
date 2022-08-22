@@ -5,54 +5,84 @@ using UnityEngine;
 public class roomScript : MonoBehaviour
 {
 
-    public GameObject[] enemies;
-    public bool allDead;
+    public List<GameObject> enemies = new List<GameObject>();
+    
+    //public bool allDead;
 
     private bool firstTimeEnter;
 
     public GameObject[] doors;
-    public bool open; 
+    public bool open, openDoors; 
+
 
     // Start is called before the first frame update
     void Awake()
-    {
-        //cameraScript = cameraObject.GetComponent<cameraScript>();
-        enemies = GameObject.FindGameObjectsWithTag("Enemy");
+    {   
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (allDead)
+        
+        openDoors = !doors[0].GetComponent<Door_Script>().isLocked; 
+
+        if(open == false && openDoors == true)
         {
-            Debug.Log("All Dead Passed");
+            foreach( GameObject door in doors)
+            {
+                door.GetComponent<Door_Script>().isLocked = true;
+            }
+        }
+        else if ( open == true && openDoors == false)
+        {
+            foreach( GameObject door in doors)
+            {
+                door.GetComponent<Door_Script>().isLocked = false;
+            }
+        }
+        
+        if (allDead())
+        {
+            open = true;
         }
     }
 
-    public void checkDeaths()
+    public bool allDead()
     {
-        for (int i = 0; i < enemies.Length; i++)
+        if(enemies.Count <= 0)
         {
-            if (enemies[i] != null)
-            {
-                allDead = false;
-            }else
-            {
-                allDead = true;
-            }
+            
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
+
+    public void muerteEnemigo(GameObject enemy)
+    {
+        if (enemies.Contains(enemy))
+        {
+            enemies.Remove(enemy);
+        }
+    }
+
+    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            if(firstTimeEnter == false)
+            Camera.main.GetComponent<cameraScript>().currentRoom = gameObject;
+            if (firstTimeEnter == false)
             {
                 firstTimeEnter = true;
+                open = false;
             }
         }
-        Camera.main.GetComponent<cameraScript>().currentRoom = gameObject;
+        
     }
 
     

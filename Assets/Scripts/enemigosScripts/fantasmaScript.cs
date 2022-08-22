@@ -53,7 +53,7 @@ public class fantasmaScript : MonoBehaviour
 
     private void shoot(Vector3 dir)
     {
-        GameObject bullet = Instantiate(BulletPrefab, transform.position + dir * 0.2f, Quaternion.identity);
+        GameObject bullet = Instantiate(BulletPrefab, transform.position + dir * 0.3f, Quaternion.identity);
         bullet.GetComponent<bulletScript>().setDirection(dir);
     }
     public void hit()
@@ -67,9 +67,8 @@ public class fantasmaScript : MonoBehaviour
 
     public void die()
     {
-        room.GetComponent<roomScript>().checkDeaths();
-        GetComponent<Collider2D>().enabled = false;
-        this.enabled = false;
         Destroy(gameObject);
+        room.GetComponent<roomScript>().muerteEnemigo(gameObject);
+        Debug.Log("Muere Fantasma");
     }
 }
