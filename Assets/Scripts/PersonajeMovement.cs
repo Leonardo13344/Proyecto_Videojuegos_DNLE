@@ -30,6 +30,7 @@ public class PersonajeMovement : MonoBehaviour
         animator.SetBool("running", Horizontal != 0.0f);
         animator.SetBool("runningDown", vertical < 0.0f);
         animator.SetBool("runningUp", vertical > 0.0f);
+        animator.SetBool("Die", hp == 0);
 
         //Movimiento
         if (Horizontal < 0.0f)
@@ -91,6 +92,11 @@ public class PersonajeMovement : MonoBehaviour
     public void hit()
     {
         hp -= 1;
-        if (hp == 0) Destroy(gameObject);
+    }
+
+    public void die()
+    {
+        Destroy(gameObject);
+        Debug.Log("Muere Caracol");
     }
 }

@@ -50,7 +50,7 @@ public class bulletScript : MonoBehaviour
             PersonajeMovement pedrito = collision.collider.GetComponent<PersonajeMovement>();
             if (pedrito != null)
             {
-                //pedrito.hit();
+                pedrito.hit();
             }
             DestroyBullet();
         }
