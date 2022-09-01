@@ -119,10 +119,10 @@ TextureImporter:
       name: 1-PadreFrente_0
       rect:
         serializedVersion: 2
-        x: 47
-        y: 12
-        width: 132
-        height: 217
+        x: 9
+        y: 2
+        width: 27
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,8 +130,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6197e07e86420d4583ff15a6c812b85
-      internalID: 1258218083
+      spriteID: 8617be550f3778e478ccbaa6e64cd769
+      internalID: 1901084605
       vertices: []
       indices: 
       edges: []
@@ -140,10 +140,10 @@ TextureImporter:
       name: 1-PadreFrente_1
       rect:
         serializedVersion: 2
-        x: 271
-        y: 12
-        width: 132
-        height: 217
+        x: 53
+        y: 2
+        width: 28
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,8 +151,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 102c9be23bb79874a83a03e19c5e8c0f
-      internalID: 562017397
+      spriteID: 73a68e5205cb8274f9812c7353e32489
+      internalID: 1846492533
       vertices: []
       indices: 
       edges: []
@@ -161,10 +161,10 @@ TextureImporter:
       name: 1-PadreFrente_2
       rect:
         serializedVersion: 2
-        x: 495
-        y: 12
-        width: 132
-        height: 217
+        x: 98
+        y: 2
+        width: 28
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,8 +172,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 713bb33dee3928d4f8c636265f42e4da
-      internalID: 1276083395
+      spriteID: 0687ae7f5256b62449467af20e217818
+      internalID: -254105487
       vertices: []
       indices: 
       edges: []
@@ -189,9 +189,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      1-PadreFrente_0: 1258218083
-      1-PadreFrente_1: 562017397
-      1-PadreFrente_2: 1276083395
+      1-PadreFrente_0: 1901084605
+      1-PadreFrente_1: 1846492533
+      1-PadreFrente_2: -254105487
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

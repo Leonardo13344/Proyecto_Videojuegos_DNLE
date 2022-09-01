@@ -40,7 +40,7 @@ public class fantasmaScript : MonoBehaviour
         animator.SetBool("lookLeft", direction.x < 0.0f && ((angle >= 150f && angle <= 180f) || (angle >= -180f && angle <= -150f)));
         animator.SetBool("lookUp", direction.y > 0.0f && (angle >= 30f && angle <= 150f));
 
-        if (Time.time > LastShoot + 0.25f && (distanceX < 1.0f && distanceY < 1.0f) && isAlive)
+        if (Time.time > LastShoot + 1f && (distanceX < 1.0f && distanceY < 1.0f) && isAlive)
         {
             shoot(direction);
             LastShoot = Time.time;
@@ -69,6 +69,7 @@ public class fantasmaScript : MonoBehaviour
     {
         Destroy(gameObject);
         room.GetComponent<roomScript>().muerteEnemigo(gameObject);
+        ScoreController.aumentoFantasma();
         Debug.Log("Muere Fantasma");
     }
 }

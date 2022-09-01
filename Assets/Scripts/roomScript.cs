@@ -12,13 +12,16 @@ public class roomScript : MonoBehaviour
     private bool firstTimeEnter;
 
     public GameObject[] doors;
-    public bool open, openDoors; 
+    public bool open, openDoors;
+
+    
+
 
 
     // Start is called before the first frame update
-    void Awake()
-    {   
-
+    void Start()
+    {
+        
     }
 
     // Update is called once per frame
@@ -76,6 +79,7 @@ public class roomScript : MonoBehaviour
         if (collision.tag == "Player")
         {
             Camera.main.GetComponent<cameraScript>().currentRoom = gameObject;
+            Camera.main.GetComponent<cameraScript>().change = true;
             if (firstTimeEnter == false)
             {
                 firstTimeEnter = true;

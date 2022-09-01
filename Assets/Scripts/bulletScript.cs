@@ -34,14 +34,15 @@ public class bulletScript : MonoBehaviour
         {
             caracolScript caracol = collision.collider.GetComponent<caracolScript>();
             fantasmaScript fantasma = collision.collider.GetComponent<fantasmaScript>();
-            if (caracol != null)
-            {
-                caracol.hit();
-            }
-            if(fantasma != null)
-            {
-                fantasma.hit();
-            }
+            Guagua_Script guagua = collision.collider.GetComponent<Guagua_Script>();
+            Dama_Script dama = collision.collider.GetComponent<Dama_Script>();
+            Padre_Script padre = collision.collider.GetComponent<Padre_Script>();
+            if (caracol != null)caracol.hit();
+            if(fantasma != null)fantasma.hit();
+            if (guagua != null)guagua.hit();
+            if (dama != null) dama.hit();
+            if (padre != null) padre.hit();
+
             DestroyBullet();
         }
         else if (collision.gameObject.tag == "Player")
