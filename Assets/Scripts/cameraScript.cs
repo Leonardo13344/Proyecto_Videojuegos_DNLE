@@ -20,7 +20,7 @@ public class cameraScript : MonoBehaviour
     float topLimit;
 
     public bool change = false;
-
+  
 
 
     // Start is called before the first frame update
@@ -32,7 +32,7 @@ public class cameraScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        
             //Debug.Log("Test Change Room");
             transform.position = new Vector3(currentRoom.transform.position.x, currentRoom.transform.position.y, -10);
             change = false;
