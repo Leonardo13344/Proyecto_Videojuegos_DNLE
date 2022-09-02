@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class caracolScript : MonoBehaviour
 {
@@ -77,8 +78,11 @@ public class caracolScript : MonoBehaviour
     {
         Destroy(gameObject);
         room.GetComponent<roomScript>().muerteEnemigo(gameObject);
-        ScoreController.aumentoCaracol();
+        //ScoreController.aumentoCaracol();
+        //PersonajeMovement.sumarScore();
+
         Debug.Log("Muere Caracol");
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

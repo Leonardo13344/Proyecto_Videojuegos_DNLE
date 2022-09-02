@@ -1,21 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PersonajeMovement : MonoBehaviour
 {
 
+    static PersonajeMovement current;
 
     [Header("BARRA DE VIDA ")]
     [SerializeField] private GameObject barraVida;
-    [SerializeField] private Sprite vida1, vida2, vida3, vida0; 
+    [SerializeField] private Sprite vida1, vida2, vida3, vida0, vida4, vida5, vida6, vida7, vida8, vida9, vida10; 
 
 
     [Header("PRUEBA")]
     [SerializeField] private GameObject gameOver;
 
-
+    [Header("PRUEBA")]
+    [SerializeField] private Text contadorScore;
+    
+    
     [Header("EFECTOS DE SONIDO")]
     [SerializeField] private GameObject ODisparoPlayer;
     [SerializeField] private GameObject OMuertePlayer;
@@ -34,16 +39,40 @@ public class PersonajeMovement : MonoBehaviour
     private AudioSource SDisparoPlayer;
     private AudioSource SMuertePlayer;
     private AudioSource SaudioMixer;
+    public int score;
+
+
+
+    public static void sumarScore(){
+        current.score++;
+        if(current.score < 10 ) current.contadorScore.text = "0" + current.score;
+        else current.contadorScore.text = current.score.ToString();
+
+    }
+
+    public void Awake(){
+
+       if(current != null && current != this){
+           //Destroy(gameObject);
+           return;
+       }
+       current = this;
+      // DontDestroyOnLoad(gameObject);
 
 
 
 
 
 
+
+   }
 
     // Start is called before the first frame update
     void Start()
     {
+
+
+
         Rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         SDisparoPlayer = ODisparoPlayer.GetComponent<AudioSource>();
@@ -57,6 +86,9 @@ public class PersonajeMovement : MonoBehaviour
     void Update()
     {
         
+
+
+
         Horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
 
@@ -142,8 +174,16 @@ public class PersonajeMovement : MonoBehaviour
     }
 
     private void barraDeVida(int hp){
-        if(hp == 7) barraVida.GetComponent<Image>().sprite = vida2; 
-        if(hp == 3) barraVida.GetComponent<Image>().sprite = vida1; 
+        if(hp == 1) barraVida.GetComponent<Image>().sprite = vida1; 
+        if(hp == 2) barraVida.GetComponent<Image>().sprite = vida2; 
+        if(hp == 3) barraVida.GetComponent<Image>().sprite = vida3; 
+        if(hp == 4) barraVida.GetComponent<Image>().sprite = vida4; 
+        if(hp == 5) barraVida.GetComponent<Image>().sprite = vida5; 
+        if(hp == 6) barraVida.GetComponent<Image>().sprite = vida6; 
+        if(hp == 7) barraVida.GetComponent<Image>().sprite = vida7; 
+        if(hp == 8) barraVida.GetComponent<Image>().sprite = vida8; 
+        if(hp == 9) barraVida.GetComponent<Image>().sprite = vida9; 
+        if(hp == 10) barraVida.GetComponent<Image>().sprite = vida10; 
 
     }
 
@@ -155,8 +195,7 @@ public class PersonajeMovement : MonoBehaviour
         SaudioMixer.Stop();
         Destroy(gameObject);
         barraVida.GetComponent<Image>().sprite = vida0;
-        
-        Debug.Log("Muere Caracol");
+         
         SMuertePlayer.Play();
     }
 }
