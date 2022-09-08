@@ -69,6 +69,7 @@ public class fantasmaScript : MonoBehaviour
     {
         Destroy(gameObject);
         room.GetComponent<roomScript>().muerteEnemigo(gameObject);
+        PersonajeMovement.sumarScore(2);
         
         Debug.Log("Muere Fantasma");
     }

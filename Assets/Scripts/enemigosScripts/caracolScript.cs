@@ -79,7 +79,7 @@ public class caracolScript : MonoBehaviour
         Destroy(gameObject);
         room.GetComponent<roomScript>().muerteEnemigo(gameObject);
         //ScoreController.aumentoCaracol();
-        //PersonajeMovement.sumarScore();
+        PersonajeMovement.sumarScore(1);
 
         Debug.Log("Muere Caracol");
 

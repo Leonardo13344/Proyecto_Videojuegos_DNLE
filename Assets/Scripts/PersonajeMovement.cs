@@ -43,8 +43,8 @@ public class PersonajeMovement : MonoBehaviour
 
 
 
-    public static void sumarScore(){
-        current.score++;
+    public static void sumarScore(int sum){
+        current.score += sum;
         if(current.score < 10 ) current.contadorScore.text = "0" + current.score;
         else current.contadorScore.text = current.score.ToString();
 

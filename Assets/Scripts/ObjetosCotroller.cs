@@ -9,7 +9,7 @@ public class ObjetosCotroller : MonoBehaviour
         Debug.Log("CHOCOLATE");
         if(collision.gameObject.tag == "Player"){
             Debug.Log("CHOCA");
-            PersonajeMovement.sumarScore();
+            PersonajeMovement.sumarScore(1);
             Destroy(gameObject);
 
         }

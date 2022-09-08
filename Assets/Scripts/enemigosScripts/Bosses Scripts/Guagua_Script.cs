@@ -18,6 +18,9 @@ public class Guagua_Script : MonoBehaviour
     public GameObject bulletPrefab;
     private float lastShoot;
 
+    [Header("WIN")]
+    [SerializeField] private GameObject win;
+
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -97,6 +100,9 @@ public class Guagua_Script : MonoBehaviour
     {
         Destroy(gameObject);
         room.GetComponent<roomScript>().muerteEnemigo(gameObject);
+        PersonajeMovement.sumarScore(10);
+        win.SetActive(true);
+        Time.timeScale = 1f;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

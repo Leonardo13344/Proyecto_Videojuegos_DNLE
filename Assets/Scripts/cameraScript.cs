@@ -63,6 +63,7 @@ public class cameraScript : MonoBehaviour
     public void changeRoom(float leftLimit, float rightLimit, float bottomLimit, float topLimit)
     {
         Debug.Log("Test Change Camera");
+        if(player == null) return;
         transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -10);
         transform.position = new Vector3
             (

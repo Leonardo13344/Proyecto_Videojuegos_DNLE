@@ -50,5 +50,10 @@ public class MenuPausa : MonoBehaviour
         audioMixer.SetFloat("VOLUMEN", volumen);
    }
 
+    public void siguiente()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
 
 }
